@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
 
-function App() {
+
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import AuthPage from './screens/Listener/authPage';
+
+import ClientIdValidation from "./screens/Listener/ClientIDValidation";
+import ClaimSlotPage from "./screens/Listener/ClaimSlotPage";
+import MonthlyUsage from "./screens/Client/MonthlyUsage";
+import RealtimeReading from "./screens/Client/RealtimeReading";
+import AdminPanel from "./screens/Admin/AdminPanel";
+import AdminDashBoard from "./screens/Admin/AdminDashBoard";
+import LoginPage from "./screens/Login/LoginPage";
+
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<AuthPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/clientid" element = {<ClientIdValidation/>}/>
+      <Route path="/claimslot" element = {<ClaimSlotPage/>}/>
+      <Route path="/monthlyusage" element ={<MonthlyUsage/>}/>
+      <Route path="/readings" element={<RealtimeReading/>}/>
+      <Route path="/adminpanel" element={<AdminPanel/>}/>
+      <Route path="/adminboard" element={<AdminDashBoard/>}/>
+    </Routes>
   );
 }
 
-export default App;

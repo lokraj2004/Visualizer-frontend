@@ -1,0 +1,27 @@
+.numeric-container {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+}
+
+.numeric-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.numeric-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #007bff;
+}
+
+.numeric-input {
+  width: 90%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}

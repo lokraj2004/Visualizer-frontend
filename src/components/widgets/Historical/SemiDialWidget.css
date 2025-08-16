@@ -1,0 +1,154 @@
+.semi-dial-container {
+  width: 220px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 12px 14px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.semi-dial-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.semi-dial-header h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+
+.options-wrapper {
+  position: relative;
+}
+
+.options-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.options-menu {
+  position: absolute;
+  right: 0;
+  top: 1.5rem;
+  width: 180px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+   animation: fadeIn 0.2s ease-out;
+}
+
+.options-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.options-group input {
+  padding: 0.3rem;
+  font-size: 0.85rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+}
+
+.options-group button {
+  padding: 0.4rem;
+  font-size: 0.85rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.rename-disabled {
+  font-size: 0.85rem;
+  text-align: left;
+  background: none;
+  border: none;
+  color: gray;
+  cursor: default;
+  width: 100%;
+}
+
+.semi-dial-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.semi-dial {
+  position: relative;
+  width: 180px;
+  height: 90px;
+  background: linear-gradient(to top, #e3eefe, #f9fbff);
+  border-radius: 180px 180px 0 0;
+  box-shadow: inset 0 -3px 10px #d1e1ffcc;
+  border: 2.5px solid #007bff;
+  margin-bottom: 10px;
+}
+
+.needle {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  height: 80px;
+  
+  transform-origin: bottom center;
+  background: linear-gradient(to top, #dc2626, #f87171);
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease;
+}
+
+.tick-label {
+  position: absolute;
+  bottom: 0px;
+  font-size: 0.55rem;
+  color: #555;
+  font-weight: 600;
+  user-select: none;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tick-label.left {
+  left: 1px;
+}
+
+.tick-label.right {
+  right: 1px;
+}
+
+.maintenance-status {
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.maintenance-status.alert {
+  color: #dc2626;
+}
+
+.maintenance-status.good {
+  color: #16a34a;
+}

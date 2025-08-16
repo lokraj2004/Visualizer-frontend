@@ -1,0 +1,128 @@
+/* RealtimeLineGraph Widget Container */
+.line-graph-widget {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+  user-select: none;
+  position: relative;
+}
+
+/* Header */
+.line-graph-widget .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.line-graph-widget h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+
+}
+
+/* Dropdown */
+.line-graph-widget .dropdown {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 5px;
+  margin-right: 2px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  padding:8px;
+  width: 30px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.line-graph-widget .dropdown-menu {
+  position: absolute;
+  top: 28px;
+  right: 0;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  padding: 12px;
+  width: 220px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.line-graph-widget .dropdown-menu input {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 0.9rem;
+  transition: border 0.2s ease;
+}
+
+.line-graph-widget .dropdown-menu input:focus {
+  border-color: #8884d8;
+}
+
+.line-graph-widget .dropdown-menu button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #8884d8;
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.line-graph-widget .dropdown-menu button:hover {
+  background: #665dbb;
+}
+
+/* MoreVertical Icon */
+.line-graph-widget .options-icon {
+  /* cursor: pointer;
+  color: #666;
+  font-size: 1.3rem;
+  transition: color 0.2s ease; */
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  user-select: none;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+
+}
+
+.line-graph-widget .options-icon:hover {
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .line-graph-widget {
+    padding: 12px 16px;
+    max-width: 100%;
+  }
+
+  .line-graph-widget .dropdown-menu {
+    width: 180px;
+    right: 0;
+    top: 28px;
+  }
+
+
+
+}

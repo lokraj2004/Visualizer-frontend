@@ -1,0 +1,143 @@
+/* Donut Chart Container */
+.donut-container {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 12px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  display: inline-flex; /* shrink to fit content */
+  flex-direction: column;
+  gap: 10px;
+  align-items: center; /* center content */
+  width: 300px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Hover effect */
+.donut-container:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Header */
+.donut-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.donut-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.options-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  color: #666;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.options-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  padding: 12px;
+  width: 220px;
+  z-index: 10;
+}
+
+.dropdown-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.dropdown-item label {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.dropdown-item input {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 0.9rem;
+  transition: border 0.2s ease;
+}
+
+.dropdown-item input:focus {
+  border-color: #0088FE;
+}
+
+.dropdown-item button {
+  margin-top: 6px;
+  padding: 6px;
+  border-radius: 6px;
+  background: #0088FE;
+  border: none;
+  color: white;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dropdown-item button:hover {
+  background: #006edc;
+}
+
+.dropdown-item.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Error Message */
+.donut-error {
+  color: #e53935;
+  text-align: center;
+  padding: 8px;
+  font-size: 0.85rem;
+  background: rgba(229, 57, 53, 0.1);
+  border-radius: 8px;
+}
+
+/* Chart wrapper */
+.chart-wrapper {
+  width: 400px;
+  height: 300px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .chart-wrapper {
+    width: 300px;
+    height: 250px;
+  }
+
+  .donut-title {
+    font-size: 1rem;
+  }
+
+  .dropdown {
+    width: 180px;
+  }
+}

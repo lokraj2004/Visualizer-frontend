@@ -1,0 +1,44 @@
+.text-submit-container {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.text-submit-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.text-submit-header p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.text-submit-form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.text-submit-form input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px 0 0 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.text-submit-form button {
+  padding: 8px 14px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+
+.text-submit-form button:hover {
+  background: #0056b3;
+}

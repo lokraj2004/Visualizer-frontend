@@ -1,0 +1,115 @@
+/* LineGraph Container */
+.widget-container {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 12px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  user-select: none;
+}
+
+/* Header */
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* Needed for dropdown positioning */
+}
+
+.widget-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Options button */
+.options-button {
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  user-select: none;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.options-button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  padding: 12px;
+  width: 220px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dropdown-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dropdown-item label {
+  font-size: 0.85rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.dropdown-item select,
+.dropdown-item input {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 0.9rem;
+  transition: border 0.2s ease;
+}
+
+.dropdown-item select:focus,
+.dropdown-item input:focus {
+  border-color: #8884d8;
+}
+
+.dropdown-item button {
+  padding: 6px;
+  border-radius: 6px;
+  background: #8884d8;
+  border: none;
+  color: white;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dropdown-item button:hover {
+  background: #665dbb;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .widget-container {
+    padding: 12px 16px;
+    max-width: 100%;
+  }
+  
+  /* /* .dropdown {
+    right: 40px;
+    width: 180px;
+  } */
+} 

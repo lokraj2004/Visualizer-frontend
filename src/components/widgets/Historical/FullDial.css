@@ -1,0 +1,193 @@
+.full-dial-container {
+  width: 180px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px 16px 20px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.full-dial-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+
+  position: relative; /* enable absolute positioning of options-menu inside */
+}
+
+.full-dial-header h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+  position: relative;
+}
+
+.options-toggle {
+  font-size: 1.3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.3s ease;
+  padding: 4px;
+  border-radius: 6px;
+  position: relative; /* so it’s on top for clicking */
+  z-index: 101;       /* above options-menu for clicks */
+}
+
+.options-toggle:hover {
+  color: #007bff;
+  background: #e0f0ff;
+}
+
+.options-menu {
+  position: absolute;
+  top: 36px; /* just below button */
+  right: 0;
+  width: 210px; /* fixed width */
+  background: #f6faff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  box-shadow: 0 4px 12px rgba(42, 113, 188, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 100;
+}
+.options-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.options-input-group {
+  display: flex;
+  gap: 8px;
+
+}
+
+.options-wrapper {
+  position: relative;
+  display: inline-block; /* so menu can be absolutely positioned inside */
+}
+
+.sensor-input {
+  flex-grow: 1;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  border: 1.5px solid #bbb;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.sensor-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px #a3c8ff88;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 6px 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.rename-disabled {
+  font-size: 0.85rem;
+  padding: 6px;
+  color: #999;
+  background: #eee;
+  border-radius: 8px;
+  border: none;
+  cursor: not-allowed;
+  user-select: none;
+}
+
+.dial-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dial-outer {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 4px solid #007bff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 4px 10px #a0c8ff88;
+  background: #e9f2ff;
+}
+
+.dial-outer.normal {
+  border-color: #007bff;
+}
+
+.dial-outer.overload {
+  border-color: #dc3545;
+  box-shadow: inset 0 4px 14px #f5b5b5cc;
+}
+
+.dial-fill {
+  background-color: #007bff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transition: clip-path 0.7s ease;
+  clip-path: inset(100% 0 0 0);
+}
+
+.dial-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #222;
+  text-align: center;
+  user-select: none;
+}
+
+.fill-percent {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  color: #007bff;
+}
+
+.dial-outer.overload .fill-percent {
+  color: #dc3545;
+}
+
+.fill-label {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #666;
+  letter-spacing: 0.03em;
+}
+
+.overload-warning {
+  color: #dc3545;
+  font-weight: 600;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  user-select: none;
+  text-align: center;
+}

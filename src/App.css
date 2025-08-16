@@ -24,6 +24,13 @@
   color: white;
 }
 
+.sized-box {
+  width: 200px;  /* The fixed width */
+  height: 100px;  /* The fixed height */
+  background-color: rgb(221, 17, 17); /* To make it visible */
+  border: 1px solid darkgray; /* Optional border */
+}
+
 .App-link {
   color: #61dafb;
 }
